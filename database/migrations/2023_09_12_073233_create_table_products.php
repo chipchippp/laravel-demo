@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->unsignedSmallInteger('qty')->default(0);
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categori2');
             $table->timestamps();
         });
     }
