@@ -14,9 +14,14 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedDecimal('grand_total', 10, 2);
-            $table->enum('status',['loc', 'trang'])
-            ->default('loc');
+            $table->string('fullname');
+            $table->string('tel', 20);
+            $table->string('address');
+            $table->unsignedDecimal('grand_total', 14, 2);
+            $table->smallInteger('status')->default(0);
+            $table->string("shipping_method");
+            $table->string("payment_method");
+            $table->boolean('is_maid')->default(false);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
