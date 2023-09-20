@@ -3,55 +3,36 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function home(){
-        return view("pages.index");
+//        $product = Product::
+//             where("qty", ">", 30)
+////            ->where("name", "like", "%Olson%")
+//            -> where("price", ">", 500)
+//            ->orderBy("create_at", "desc")
+//            ->limit(12)->get();
+        $products = Product::orderBy("create_at", "desc")->paginate(12); // tao ra phan trang
+        return view("pages.home", compact("products"));
     }
     public function aboutUs(){
         return view("pages.aboutUs");
     }
-    public function test(){
-        $title = 'Laravel Course from Nguyen Van Loc';
-        $x = 2;
-        $y = 1;
-        $name = 'Hoang';
-        // return view("layouts.test", compact('title', 'x', 'y'));
-        // return view('layouts.test')->with('name', $name);
-        // 'with' method can only send 1 parameter
-        // send an associative array
-        $myphone = [
-            'name' => 'ip 14',
-            'year' => '2022',
-            'isFavorited' => true
-        ];
-       // return view('layouts.app', compact('myphone'));
-        // send directly
-//        return view('layouts.test', [
-//           'myphone' => $myphone
-//        ]);
-//        print_r(route('layouts'));
-//        hiện tên link của web
-        return view('layouts.test');
-    }
-//    public function detail($productName){
-//        //return "product id = " .$id;
-//        $phones = [
-//            'iphone 15s' => 'iphone 15s',
-//            'samsung' => 'samsung'
-//        ];
-//        return view('layouts.test', [
-////            'product' => [
-////                'name' => 'ip 15',
-////                'year' => 2024
-////            ]
-//                'product' => $phones[$productName]  ?? 'unknown product'
-//        ]);
-//    }
-    public function detail($productName ,$id){
-        return "product name = " .$productName.
-            " ,product id = " .$id;
+    public function category(Category $category){
+        // dua vao id tim category
+        //
+//        $category = Category::find($id);
+//        if ($category == null){
+//            return abort(404);4
+//        }
+//        $category = Category::findOrFail($id);
+
+        $products = Product:: orderBy("create_at", "desc")
+            ->paginate(12)->where("categories_id", $category->id);
+        return view("pages.category", compact("products"));
     }
 }

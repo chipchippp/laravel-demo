@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedDecimal('price');
             $table->unsignedSmallInteger('qty')->default(0);
             $table->foreign('order_id')->references('id')->on('orders');
-            $table->foreign('products_id')->references('id')->on('products');
-            $table->primary(['order_id', 'products_id']);  //composite key
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->primary(['order_id', 'product_id']);  //composite key
         });
     }
 

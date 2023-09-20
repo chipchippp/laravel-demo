@@ -9,7 +9,7 @@ class Order extends Model
 {
     use HasFactory;
     protected $fillable = [
-      'full_name' ,
+      'full_name',
         "tel",
         'address',
         'grand_total',
@@ -18,7 +18,5 @@ class Order extends Model
         "shipping_method",
         "payment_method",
         'is_maid',
-
-
     ];
 }
