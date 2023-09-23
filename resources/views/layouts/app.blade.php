@@ -23,7 +23,6 @@
 @include("layouts.header")
 
 @include("layouts.nav")
-
 <!-- Breadcrumb Section Begin -->
 <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
     <div class="container">
@@ -32,7 +31,7 @@
                 <div class="breadcrumb__text">
                     <h2>Organi Shop</h2>
                     <div class="breadcrumb__option">
-                        <a href="./index.html">Home</a>
+                        <a href="./">Home</a>
                         <span>Shop</span>
                     </div>
                 </div>
