@@ -40,7 +40,9 @@
                                     <td class="shoping__cart__total">
                                         ${{$item->price * $item->buy_qty}}
                                     </td>
-                                    <form action="/shop-cart/{{$item->id}}" method="post">
+{{--                                    @endforeach--}}
+{{--                                    @foreach($products as $product)--}}
+                                    <form action="/{{$item -> id}}" method="post">
                                         <td class="shoping__cart__item__close">
                                             @csrf
                                             @method('delete')
@@ -48,9 +50,8 @@
 {{--                                            <span class="icon_close">  a</span>--}}
                                         </td>
                                     </form>
+                                    @endforeach
                                 </tr>
-                            @endforeach
-
                             </tbody>
                         </table>
                     </div>
@@ -83,7 +84,7 @@
                             <li>VAT <span>10%</span></li>
                             <li>Total <span>${{$total}}</span></li>
                         </ul>
-                        <a href="#" class="primary-btn btn @if(!$can_checkout)disabled @endif">PROCEED TO CHECKOUT</a>
+                        <a href="{{url('/checkout')}}" class="primary-btn btn @if(!$can_checkout)disabled @endif">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>
