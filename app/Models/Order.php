@@ -21,4 +21,7 @@ class Order extends Model
         'payment_method',
         'is_maid',
     ];
+    public function Products(){
+        return $this->belongsTo(Product::class, "order_product")->with(["qty", "price"]);
+    }
 }

@@ -1,18 +1,30 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends("layouts.app")
+@section("main")
     <div class="container">
-        <h1> THANK YOU !</h1>
-        <h4>You order has been placed </h4>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus dignissimos ea error laudantium nobis, sint velit. Aspernatur assumenda delectus distinctio dolor laboriosam, quos reprehenderit suscipit. Aliquid commodi doloribus est!</p>
-        <p></p>
+        <h1 class="text-center">Thank you</h1>
+        <h3 class="text-center mb-3">Your order #{{$order->id}} has been</h3>
+        <h3>Danh sách sản phẩm của đơn hàng:</h3>
+        <table class="table mt-3">
+            <thead>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+            </thead>
+            <tbody>
+            @foreach($orders->Products as $item)
+                <tr>
+                    <td>{{$item->id}}</td>
+                    <td><img src="{{$item->thumbnail}}" width="120"/></td>
+                    <td>{{$item->name}}</td>
+                    <td>{{$item->pivot->price}}</td>
+                    <td>{{$item->pivot->qty}}</td>
+                    <td>{{$item->pivot->qty*$item->pivot->price}}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
-</body>
-</html>
+@endsection

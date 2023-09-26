@@ -42,6 +42,7 @@ class HomeController extends Controller
     }
 
     public function product(Product $product){
+
         $relateds = Product::where("category_id",$product->category_id)
             ->where("id","!=",$product->id)
             ->where("qty",">",0)
@@ -145,7 +146,26 @@ class HomeController extends Controller
 //            ->cc("mail nhan vien")
 //            ->bcc("mail quan ly")
 //            ->send(new OrderMail($order));
-        return redirect()->to('thank-to')->with("order", $order);
+        return redirect()->to('thank-to/$order->id')->with("order", $order);
 //        dd($request);
+    }
+    public function login(Request $request){
+        $request->validate([
+
+        ]);
+
+        return view('login.login');
+//        return redirect()->to('thank-to');
+    }
+    public function thankTo(Order $order){
+//        $order = session()->get("order");
+//        if ($order == null){
+//            return abort(404);
+//        }
+//        $item = DB::table("order_product")->where("order_id", $order->id)
+//            ->Join("products", "order_product.product_id","=","products.id")
+//            ->select("products.id","products.name","products.thumbnail","order_product.price","order_product.qty")
+//            ->get() ;
+        return view('pages.thank-you', compact('order'));
     }
 }

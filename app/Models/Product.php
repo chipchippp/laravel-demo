@@ -20,4 +20,11 @@ class Product extends Model
         'qty',
         'category_id'
     ];
+    public function Category(){ //model relationship
+//        return Category::find($this->category_id);
+        return $this->belongsTo(Category::class);
+    }
+    public function Orders(){
+        return $this->belongsToMany(Order::class, "order_product");
+    }
 }
