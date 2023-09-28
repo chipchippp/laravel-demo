@@ -168,4 +168,7 @@ class HomeController extends Controller
 //            ->get() ;
         return view('pages.thank-you', compact('order'));
     }
+    public function admin(){
+        return view('admin.admin');
+    }
 }

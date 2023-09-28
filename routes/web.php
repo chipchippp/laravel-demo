@@ -13,6 +13,8 @@ Route::get('/checkout', [\App\Http\Controllers\HomeController::class,"checkOut"]
 Route::post('/checkout', [\App\Http\Controllers\HomeController::class,"placeOrder"]);
 Route::get('/login', [\App\Http\Controllers\HomeController::class,"login"]);
 Route::get('/thankTo', [\App\Http\Controllers\HomeController::class,"thankTo"]);
+Route::get('/admin', [\App\Http\Controllers\HomeController::class,"admin"]);
+
 
 
 
