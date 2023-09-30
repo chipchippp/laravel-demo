@@ -40,16 +40,9 @@
                                     <td class="shoping__cart__total">
                                         ${{$item->price * $item->buy_qty}}
                                     </td>
-{{--                                    @endforeach--}}
-{{--                                    @foreach($products as $product)--}}
-                                    <form action="/{{$item -> id}}" method="post">
-                                        <td class="shoping__cart__item__close">
-                                            @csrf
-                                            @method('delete')
-                                            <button type="submit" class="icon_close"></button>
-{{--                                            <span class="icon_close">  a</span>--}}
-                                        </td>
-                                    </form>
+                                    <td class="shoping__cart__item__close">
+                                        <a href="/delete/{{ $item->id }}"><span class="icon_close"></span></a>
+                                    </td>
                                     @endforeach
                                 </tr>
                             </tbody>
@@ -61,8 +54,8 @@
                 <div class="col-lg-12">
                     <div class="shoping__cart__btns">
                         <a href="#" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
-                        <a href="#" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
-                            Upadate Cart</a>
+                        <a href="/clearCart" class="primary-btn cart-btn cart-btn-right"><span class="icon_loading"></span>
+                            Clear Cart</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

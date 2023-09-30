@@ -1,5 +1,5 @@
-@extends("layouts.app")
-@section("title","About us")
+@extends("admin.app-admin")
+@section("title","AdminLTE 3 | jsGrid")
 @section("main")
-    <h1>About us</h1>
+
 @endsection

@@ -124,7 +124,7 @@
                 <div class="header__cart">
                     <ul>
                         <li><a href="#"><i class="fa fa-heart"></i> <span>3</span></a></li>
-                        <li><a href="{{url("/shop-cart")}}"><i class="fa fa-shopping-bag"></i>
+                        <li><a href="{{url("/cart")}}"><i class="fa fa-shopping-bag"></i>
                                 <span>
                                     {{session()->has("cart")?count(session("cart")):0}}
                                 </span>

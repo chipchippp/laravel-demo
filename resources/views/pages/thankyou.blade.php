@@ -2,7 +2,7 @@
 @section("main")
     <div class="container">
         <h1 class="text-center">Thank you</h1>
-        <h3 class="text-center mb-3">Your order #{{$order->id}} has been</h3>
+        <h3 class="text-center mb-3">Your order #{{$order->id}} has been placed</h3>
         <h3>Danh sách sản phẩm của đơn hàng:</h3>
         <table class="table mt-3">
             <thead>
@@ -14,7 +14,7 @@
             <th>Total</th>
             </thead>
             <tbody>
-            @foreach($orders->Products as $item)
+            @foreach($order->Products as $item)
                 <tr>
                     <td>{{$item->id}}</td>
                     <td><img src="{{$item->thumbnail}}" width="120"/></td>

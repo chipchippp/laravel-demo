@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\CreateNewOrder;
 use App\Mail\OrderMail;
 use App\Models\Category;
 use App\Models\Order;
@@ -23,7 +24,7 @@ class HomeController extends Controller
         return view("pages.home",compact("products"));
     }
     public function aboutUs(){
-        return view("pages.aboutus");
+        return view("pages.aboutUs");
     }
 
     public function category(Category $category){
@@ -67,7 +68,8 @@ class HomeController extends Controller
         session(["cart"=>$cart]);
         return redirect()->back()->with("success","Đã thêm sản phẩm vào giỏ hàng");
     }
-    public function shopCart(){
+    public function Cart(){
+
         $cart = session()->has("cart")?session("cart"):[];
         $subtotal = 0;
         $can_checkout = true;
@@ -78,13 +80,30 @@ class HomeController extends Controller
             }
         }
         $total = $subtotal*1.1; //vat: 10%
-        return view("pages.shop-cart",compact("cart", "subtotal", "total","can_checkout"));
+        return view("pages.cart",
+            compact("cart", "subtotal", "total","can_checkout"));
     }
-    public function destroy($id){
-        $product = Product::find($id);
-        $product -> delete();
-        return redirect('/shop-cart', compact("product"));
+//    public function destroy($id){
+//        $product = Product::find($id);
+//        $product -> delete();
+//        return redirect('/shop-cart');
+//    }
+    public function delete(Product $product)
+    {
+        $cart = session()->has("cart") ? session("cart") : [];
+        $cart = array_filter($cart, function ($item) use ($product) {
+            return $item->id != $product->id;
+        });
+        session()->put("cart", $cart);
+        return redirect()->back()->with("success", "Đã xóa sản phẩm khỏi giỏ hàng");
     }
+
+    public function clearCart()
+    {
+        session()->forget("cart");
+        return redirect()->back()->with("success", "Đã xóa tất cả sản phẩm khỏi giỏ hàng");
+    }
+
     public function checkout(){
         $cart = session()->has("cart")?session("cart"):[];
         $subtotal = 0;
@@ -142,12 +161,8 @@ class HomeController extends Controller
         // clear cart
         session()->forget("cart");
         // send email
-//        Mail::to($request-> get("email"))
-//            ->cc("mail nhan vien")
-//            ->bcc("mail quan ly")
-//            ->send(new OrderMail($order));
-        return redirect()->to('thank-to/$order->id')->with("order", $order);
-//        dd($request);
+        event(new CreateNewOrder($order));
+        return redirect()->to('thank-to/$order->id');
     }
     public function login(Request $request){
         $request->validate([
@@ -157,18 +172,24 @@ class HomeController extends Controller
         return view('login.login');
 //        return redirect()->to('thank-to');
     }
-    public function thankTo(Order $order){
-//        $order = session()->get("order");
-//        if ($order == null){
-//            return abort(404);
-//        }
-//        $item = DB::table("order_product")->where("order_id", $order->id)
-//            ->Join("products", "order_product.product_id","=","products.id")
-//            ->select("products.id","products.name","products.thumbnail","order_product.price","order_product.qty")
-//            ->get() ;
-        return view('pages.thank-you', compact('order'));
+    public function thankYou(Order $order){
+//        $items = DB::table("order_products")->where("order_id",$order->id)
+//                        ->join("products","order_products.product_id","=","products.id")
+//                        ->select("products.id","products.name","products.thumbnail","order_products.price",
+//                        "order_products.qty")
+//                        ->get();
+        return view("pages.thank-you",compact("order"));
     }
     public function admin(){
         return view('admin.admin');
+    }
+    public function table_data(){
+        return view('tables.data');
+    }
+    public function table_jsgrid(){
+        return view('tables.jsgrid');
+    }
+    public function table_simple(){
+        return view('tables.simple');
     }
 }

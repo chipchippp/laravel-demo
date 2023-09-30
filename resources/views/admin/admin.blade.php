@@ -1,7 +1,6 @@
 @extends('admin.app-admin')
 @section("title","About us")
 @section("main")
-
     <body class="hold-transition sidebar-mini layout-fixed">
 
     <!-- Content Wrapper. Contains page content -->
