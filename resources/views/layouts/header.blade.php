@@ -22,7 +22,9 @@
             </ul>
         </div>
         <div class="header__top__right__auth">
-            <a href="#"><i class="fa fa-user"></i> Login</a>
+            @auth()
+                <a href="#"><i class="fa fa-user"></i>{{auth()->user()->name}}</a>
+            @endauth
         </div>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
@@ -88,7 +90,18 @@
                             </ul>
                         </div>
                         <div class="header__top__right__auth">
-                            <a href="{{url('/login')}}"><i class="fa fa-user"></i> Login</a>
+                            @auth()
+                                <a href="#"><i class="fa fa-user"></i>{{auth()->user()->name}}</a>
+                                <form id="form-logout" action="{{route('logout')}}" method="post">
+                                    @csrf
+                                </form>
+                                <a href="javascript:void(0)" onclick="$('form-logout').submit();"></a>
+                                <i class="fa fa-align-right">Logout</i>
+                            @endauth
+                            @guest()
+                                <a href="{{route('login')}}"><i class="fa fa-user"></i> Login</a>
+                                <a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a>
+                            @endguest
                         </div>
                     </div>
                 </div>

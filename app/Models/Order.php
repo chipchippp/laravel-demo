@@ -21,6 +21,12 @@ class Order extends Model
         'payment_method',
         'is_maid',
     ];
+    const PENDING = 0;
+    const CONFIRMED = 1;
+    const SHIPPING = 2;
+    const SHIPPED = 3;
+    const COMPLETE = 4;
+    const CANCEL = 5;
     public function Products(){
         return $this->belongsTo(Product::class, "order_product")->with(["qty", "price"]);
     }
