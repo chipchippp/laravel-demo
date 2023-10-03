@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Validation Form</title>
+    <title>AdminLTE 3 | Simple Search Form</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -381,8 +381,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Forms
@@ -409,7 +409,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../forms/validation.html" class="nav-link active">
+                                <a href="../forms/validation.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Validation</p>
                                 </a>
@@ -700,8 +700,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-search"></i>
                             <p>
                                 Search
@@ -710,13 +710,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../search/simple.html" class="nav-link">
+                                <a href="/simple.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Simple Search</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../search/enhanced.html" class="nav-link">
+                                <a href="/enhanced.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Enhanced</p>
                                 </a>
@@ -829,74 +829,30 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Validation</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Validation</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
 
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
+                <h2 class="text-center display-4">Search</h2>
                 <div class="row">
-                    <!-- left column -->
-                    <div class="col-md-12">
-                        <!-- jquery validation -->
-                        <div class="card card-primary">
-                            <div class="card-header">
-                                <h3 class="card-title">Quick Example <small>jQuery Validation</small></h3>
+                    <div class="col-md-8 offset-md-2">
+                        <form action="simple-results.html">
+                            <div class="input-group">
+                                <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-lg btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <!-- /.card-header -->
-                            <!-- form start -->
-                            <form id="quickForm">
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                    </div>
-                                    <div class="form-group mb-0">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                                            <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- /.card -->
+                        </form>
                     </div>
-                    <!--/.col (left) -->
-                    <!-- right column -->
-                    <div class="col-md-6">
-
-                    </div>
-                    <!--/.col (right) -->
                 </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
+
+    <!-- Main footer -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
             <b>Version</b> 3.2.0
@@ -916,59 +872,9 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- jquery-validation -->
-<script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
-<script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-    $(function () {
-        $.validator.setDefaults({
-            submitHandler: function () {
-                alert( "Form successful submitted!" );
-            }
-        });
-        $('#quickForm').validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: true,
-                },
-                password: {
-                    required: true,
-                    minlength: 5
-                },
-                terms: {
-                    required: true
-                },
-            },
-            messages: {
-                email: {
-                    required: "Please enter a email address",
-                    email: "Please enter a valid email address"
-                },
-                password: {
-                    required: "Please provide a password",
-                    minlength: "Your password must be at least 5 characters long"
-                },
-                terms: "Please accept our terms"
-            },
-            errorElement: 'span',
-            errorPlacement: function (error, element) {
-                error.addClass('invalid-feedback');
-                element.closest('.form-group').append(error);
-            },
-            highlight: function (element, errorClass, validClass) {
-                $(element).addClass('is-invalid');
-            },
-            unhighlight: function (element, errorClass, validClass) {
-                $(element).removeClass('is-invalid');
-            }
-        });
-    });
-</script>
 </body>
 </html>
