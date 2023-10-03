@@ -4,14 +4,14 @@
 <head>
     <title>@yield("title","Ogani | Shop")</title>
     @yield("before_css")
-    @include("layouts.head-admin")
+    @include("admin.layouts.head-admin")
     @yield("after_css")
 </head>
 
 <body>
 
 
-@include("layouts.header-admin")
+@include("admin.layouts.header-admin")
 
 {{--@include("layouts.nav-admin")--}}
 
@@ -22,10 +22,10 @@
 </section>
 <!-- Product Section End -->
 
-@include("layouts.footer-admin")
+@include("admin.layouts.footer-admin")
 
 @yield("before_js")
-@include("layouts.scripts-admin")
+@include("admin.layouts.scripts-admin")
 @yield("after_js")
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Editors</title>
+    <title>AdminLTE 3 | 500 Error</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -11,13 +11,6 @@
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="../../plugins/summernote/summernote-bs4.min.css">
-    <!-- CodeMirror -->
-    <link rel="stylesheet" href="../../plugins/codemirror/codemirror.css">
-    <link rel="stylesheet" href="../../plugins/codemirror/theme/monokai.css">
-    <!-- SimpleMDE -->
-    <link rel="stylesheet" href="../../plugins/simplemde/simplemde.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -388,8 +381,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Forms
@@ -410,7 +403,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../forms/editors.html" class="nav-link active">
+                                <a href="../forms/editors.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Editors</p>
                                 </a>
@@ -517,69 +510,69 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../examples/invoice.html" class="nav-link">
+                                <a href="/invoice.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Invoice</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/profile.html" class="nav-link">
+                                <a href="/profile.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Profile</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/e-commerce.html" class="nav-link">
+                                <a href="/e-commerce.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>E-commerce</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/projects.html" class="nav-link">
+                                <a href="/projects.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Projects</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-add.html" class="nav-link">
+                                <a href="/project-add.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Add</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-edit.html" class="nav-link">
+                                <a href="/project-edit.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Edit</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-detail.html" class="nav-link">
+                                <a href="/project-detail.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Detail</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contacts.html" class="nav-link">
+                                <a href="/contacts.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contacts</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/faq.html" class="nav-link">
+                                <a href="/faq.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>FAQ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contact-us.html" class="nav-link">
+                                <a href="/contact-us.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contact us</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>
                                 Extras
@@ -597,25 +590,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login.html" class="nav-link">
+                                        <a href="/login.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register.html" class="nav-link">
+                                        <a href="/register.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password.html" class="nav-link">
+                                        <a href="/forgot-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password.html" class="nav-link">
+                                        <a href="/recover-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v1</p>
                                         </a>
@@ -632,25 +625,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login-v2.html" class="nav-link">
+                                        <a href="/login-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register-v2.html" class="nav-link">
+                                        <a href="/register-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password-v2.html" class="nav-link">
+                                        <a href="/forgot-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password-v2.html" class="nav-link">
+                                        <a href="/recover-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v2</p>
                                         </a>
@@ -658,43 +651,43 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/lockscreen.html" class="nav-link">
+                                <a href="/lockscreen.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Lockscreen</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/legacy-user-menu.html" class="nav-link">
+                                <a href="/legacy-user-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Legacy User Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/language-menu.html" class="nav-link">
+                                <a href="/language-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Language Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/404.html" class="nav-link">
+                                <a href="/404.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 404</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/500.html" class="nav-link">
+                                <a href="/500.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 500</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/pace.html" class="nav-link">
+                                <a href="/pace.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Pace</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/blank.html" class="nav-link">
+                                <a href="/blank.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blank Page</p>
                                 </a>
@@ -841,12 +834,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Text Editors</h1>
+                        <h1>500 Error Page</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Text Editors</li>
+                            <li class="breadcrumb-item active">500 Error Page</li>
                         </ol>
                     </div>
                 </div>
@@ -855,62 +848,32 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card-outline card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                Summernote
-                            </h3>
+            <div class="error-page">
+                <h2 class="headline text-danger">500</h2>
+
+                <div class="error-content">
+                    <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oops! Something went wrong.</h3>
+
+                    <p>
+                        We will work on fixing that right away.
+                        Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search form.
+                    </p>
+
+                    <form class="search-form">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search">
+
+                            <div class="input-group-append">
+                                <button type="submit" name="submit" class="btn btn-danger"><i class="fas fa-search"></i>
+                                </button>
+                            </div>
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-              <textarea id="summernote">
-                Place <em>some</em> <u>text</u> <strong>here</strong>
-              </textarea>
-                        </div>
-                        <div class="card-footer">
-                            Visit <a href="https://github.com/summernote/summernote/">Summernote</a> documentation for more examples and information about the plugin.
-                        </div>
-                    </div>
+                        <!-- /.input-group -->
+                    </form>
                 </div>
-                <!-- /.col-->
             </div>
-            <!-- ./row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card card-outline card-info">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                CodeMirror
-                            </h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body p-0">
-              <textarea id="codeMirrorDemo" class="p-3">
-<div class="info-box bg-gradient-info">
-  <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
-  <div class="info-box-content">
-    <span class="info-box-text">Bookmarks</span>
-    <span class="info-box-number">41,410</span>
-    <div class="progress">
-      <div class="progress-bar" style="width: 70%"></div>
-    </div>
-    <span class="progress-description">
-      70% Increase in 30 Days
-    </span>
-  </div>
-</div>
-              </textarea>
-                        </div>
-                        <div class="card-footer">
-                            Visit <a href="https://codemirror.net/">CodeMirror</a> documentation for more examples and information about the plugin.
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col-->
-            </div>
-            <!-- ./row -->
+            <!-- /.error-page -->
+
         </section>
         <!-- /.content -->
     </div>
@@ -936,27 +899,7 @@
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
-<!-- Summernote -->
-<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
-<!-- CodeMirror -->
-<script src="../../plugins/codemirror/codemirror.js"></script>
-<script src="../../plugins/codemirror/mode/css/css.js"></script>
-<script src="../../plugins/codemirror/mode/xml/xml.js"></script>
-<script src="../../plugins/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-<!-- Page specific script -->
-<script>
-    $(function () {
-        // Summernote
-        $('#summernote').summernote()
-
-        // CodeMirror
-        CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-            mode: "htmlmixed",
-            theme: "monokai"
-        });
-    })
-</script>
 </body>
 </html>

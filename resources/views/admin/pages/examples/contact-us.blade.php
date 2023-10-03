@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | 404 Page not found</title>
+    <title>AdminLTE 3 | Contact us</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -500,8 +501,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Pages
@@ -510,69 +511,69 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../examples/invoice.html" class="nav-link">
+                                <a href="/invoice.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Invoice</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/profile.html" class="nav-link">
+                                <a href="/profile.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Profile</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/e-commerce.html" class="nav-link">
+                                <a href="/e-commerce.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>E-commerce</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/projects.html" class="nav-link">
+                                <a href="/projects.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Projects</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-add.html" class="nav-link">
+                                <a href="/project-add.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Add</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-edit.html" class="nav-link">
+                                <a href="/project-edit.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Edit</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-detail.html" class="nav-link">
+                                <a href="/project-detail.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Detail</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contacts.html" class="nav-link">
+                                <a href="/contacts.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contacts</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/faq.html" class="nav-link">
+                                <a href="/faq.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>FAQ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contact-us.html" class="nav-link">
+                                <a href="/contact-us.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contact us</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>
                                 Extras
@@ -590,25 +591,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login.html" class="nav-link">
+                                        <a href="/login.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register.html" class="nav-link">
+                                        <a href="/register.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password.html" class="nav-link">
+                                        <a href="/forgot-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password.html" class="nav-link">
+                                        <a href="/recover-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v1</p>
                                         </a>
@@ -625,25 +626,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login-v2.html" class="nav-link">
+                                        <a href="/login-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register-v2.html" class="nav-link">
+                                        <a href="/register-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password-v2.html" class="nav-link">
+                                        <a href="/forgot-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password-v2.html" class="nav-link">
+                                        <a href="/recover-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v2</p>
                                         </a>
@@ -651,43 +652,43 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/lockscreen.html" class="nav-link">
+                                <a href="/lockscreen.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Lockscreen</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/legacy-user-menu.html" class="nav-link">
+                                <a href="/legacy-user-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Legacy User Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/language-menu.html" class="nav-link">
+                                <a href="/language-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Language Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/404.html" class="nav-link active">
+                                <a href="/404.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 404</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/500.html" class="nav-link">
+                                <a href="/500.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 500</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/pace.html" class="nav-link">
+                                <a href="/pace.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Pace</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/blank.html" class="nav-link">
+                                <a href="/blank.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blank Page</p>
                                 </a>
@@ -834,12 +835,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>404 Error Page</h1>
+                        <h1>Contact us</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">404 Error Page</li>
+                            <li class="breadcrumb-item active">Contact us</li>
                         </ol>
                     </div>
                 </div>
@@ -848,36 +849,47 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="error-page">
-                <h2 class="headline text-warning"> 404</h2>
 
-                <div class="error-content">
-                    <h3><i class="fas fa-exclamation-triangle text-warning"></i> Oops! Page not found.</h3>
-
-                    <p>
-                        We could not find the page you were looking for.
-                        Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search form.
-                    </p>
-
-                    <form class="search-form">
-                        <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Search">
-
-                            <div class="input-group-append">
-                                <button type="submit" name="submit" class="btn btn-warning"><i class="fas fa-search"></i>
-                                </button>
-                            </div>
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-body row">
+                    <div class="col-5 text-center d-flex align-items-center justify-content-center">
+                        <div class="">
+                            <h2>Admin<strong>LTE</strong></h2>
+                            <p class="lead mb-5">123 Testing Ave, Testtown, 9876 NA<br>
+                                Phone: +1 234 56789012
+                            </p>
                         </div>
-                        <!-- /.input-group -->
-                    </form>
+                    </div>
+                    <div class="col-7">
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="text" id="inputName" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">E-Mail</label>
+                            <input type="email" id="inputEmail" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputSubject">Subject</label>
+                            <input type="text" id="inputSubject" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage">Message</label>
+                            <textarea id="inputMessage" class="form-control" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Send message">
+                        </div>
+                    </div>
                 </div>
-                <!-- /.error-content -->
             </div>
-            <!-- /.error-page -->
+
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
             <b>Version</b> 3.2.0

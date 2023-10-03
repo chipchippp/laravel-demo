@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedDecimal("grand_total",14,2);
             $table->smallInteger("status")->default(0);
-            $table->unsignedBigInteger("user_id")->nullable();
-            $table->string("email")->nullable();
+            $table->unsignedBigInteger("user_id");
             $table->string("full_name");
             $table->string("tel",20);
             $table->string("address");

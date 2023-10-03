@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | 500 Error</title>
+    <title>AdminLTE 3 | Boxed Layout</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -12,7 +12,8 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-boxed">
+<!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -227,8 +228,8 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Layout Options
@@ -238,49 +239,49 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../layout/top-nav.html" class="nav-link">
+                                <a href="/top-nav.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="/top-nav-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation + Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/boxed.html" class="nav-link">
+                                <a href="/boxed.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Boxed</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar.html" class="nav-link">
+                                <a href="/fixed-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar-custom.html" class="nav-link">
+                                <a href="/fixed-sidebar-custom.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar <small>+ Custom Area</small></p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-topnav.html" class="nav-link">
+                                <a href="/fixed-topnav.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Navbar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-footer.html" class="nav-link">
+                                <a href="/fixed-footer.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Footer</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/collapsed-sidebar.html" class="nav-link">
+                                <a href="/collapsed-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Collapsed Sidebar</p>
                                 </a>
@@ -571,8 +572,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>
                                 Extras
@@ -675,7 +676,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/500.html" class="nav-link active">
+                                <a href="../examples/500.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 500</p>
                                 </a>
@@ -834,12 +835,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>500 Error Page</h1>
+                        <h1>Boxed Layout</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">500 Error Page</li>
+                            <li class="breadcrumb-item"><a href="#">Layout</a></li>
+                            <li class="breadcrumb-item active">Boxed Layout</li>
                         </ol>
                     </div>
                 </div>
@@ -848,36 +850,41 @@
 
         <!-- Main content -->
         <section class="content">
-            <div class="error-page">
-                <h2 class="headline text-danger">500</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Default box -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Title</h3>
 
-                <div class="error-content">
-                    <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oops! Something went wrong.</h3>
-
-                    <p>
-                        We will work on fixing that right away.
-                        Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search form.
-                    </p>
-
-                    <form class="search-form">
-                        <div class="input-group">
-                            <input type="text" name="search" class="form-control" placeholder="Search">
-
-                            <div class="input-group-append">
-                                <button type="submit" name="submit" class="btn btn-danger"><i class="fas fa-search"></i>
-                                </button>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
                             </div>
+                            <div class="card-body">
+                                Start creating your amazing application!
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                Footer
+                            </div>
+                            <!-- /.card-footer-->
                         </div>
-                        <!-- /.input-group -->
-                    </form>
+                        <!-- /.card -->
+                    </div>
                 </div>
             </div>
-            <!-- /.error-page -->
-
         </section>
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
             <b>Version</b> 3.2.0

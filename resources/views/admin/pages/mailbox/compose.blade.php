@@ -483,19 +483,19 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../mailbox/mailbox.html" class="nav-link">
+                                <a href="/mailbox.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Inbox</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../mailbox/compose.html" class="nav-link active">
+                                <a href="/compose.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Compose</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../mailbox/read-mail.html" class="nav-link">
+                                <a href="/read-mail.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Read</p>
                                 </a>

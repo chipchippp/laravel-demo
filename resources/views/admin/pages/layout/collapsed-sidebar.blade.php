@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Boxed Layout</title>
+    <title>AdminLTE 3 | Collapsed Sidebar</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -12,7 +12,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-boxed">
+<body class="hold-transition sidebar-mini sidebar-collapse">
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
@@ -239,49 +239,49 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../layout/top-nav.html" class="nav-link">
+                                <a href="/top-nav.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/top-nav-sidebar.html" class="nav-link">
+                                <a href="/top-nav-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Top Navigation + Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/boxed.html" class="nav-link active">
+                                <a href="/boxed.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Boxed</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar.html" class="nav-link">
+                                <a href="/fixed-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar-custom.html" class="nav-link">
+                                <a href="/fixed-sidebar-custom.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar <small>+ Custom Area</small></p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-topnav.html" class="nav-link">
+                                <a href="/fixed-topnav.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Navbar</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-footer.html" class="nav-link">
+                                <a href="/fixed-footer.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Footer</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/collapsed-sidebar.html" class="nav-link">
+                                <a href="/collapsed-sidebar.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Collapsed Sidebar</p>
                                 </a>
@@ -572,7 +572,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item menu-open">
                         <a href="#" class="nav-link">
                             <i class="nav-icon far fa-plus-square"></i>
                             <p>
@@ -835,13 +835,13 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Boxed Layout</h1>
+                        <h1>Collapsed Sidebar</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Layout</a></li>
-                            <li class="breadcrumb-item active">Boxed Layout</li>
+                            <li class="breadcrumb-item active">Collapsed Sidebar</li>
                         </ol>
                     </div>
                 </div>
