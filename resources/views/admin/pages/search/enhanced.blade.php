@@ -3,19 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Fixed Sidebar</title>
+    <title>AdminLTE 3 | Enhanced Search Form</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<!-- Site wrapper -->
+<body class="hold-transition sidebar-mini">
 <div class="wrapper">
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -230,8 +229,8 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Layout Options
@@ -259,7 +258,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar.html" class="nav-link active">
+                                <a href="../layout/fixed-sidebar.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Fixed Sidebar</p>
                                 </a>
@@ -703,8 +702,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-search"></i>
                             <p>
                                 Search
@@ -713,13 +712,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../search/simple.html" class="nav-link">
+                                <a href="/simple.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Simple Search</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../search/enhanced.html" class="nav-link">
+                                <a href="/enhanced.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Enhanced</p>
                                 </a>
@@ -832,61 +831,59 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1>Fixed Layout</h1>
-                    </div>
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Layout</a></li>
-                            <li class="breadcrumb-item active">Fixed Layout</li>
-                        </ol>
-                    </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
-
         <!-- Main content -->
         <section class="content">
-
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Default box -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Title</h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                        <i class="fas fa-times"></i>
-                                    </button>
+                <h2 class="text-center display-4">Enhanced Search</h2>
+                <form action="enhanced-results.html">
+                    <div class="row">
+                        <div class="col-md-10 offset-md-1">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Result Type:</label>
+                                        <select class="select2" multiple="multiple" data-placeholder="Any" style="width: 100%;">
+                                            <option>Text only</option>
+                                            <option>Images</option>
+                                            <option>Video</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Sort Order:</label>
+                                        <select class="select2" style="width: 100%;">
+                                            <option selected>ASC</option>
+                                            <option>DESC</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label>Order By:</label>
+                                        <select class="select2" style="width: 100%;">
+                                            <option selected>Title</option>
+                                            <option>Date</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                Start creating your amazing application!
+                            <div class="form-group">
+                                <div class="input-group input-group-lg">
+                                    <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here" value="Lorem ipsum">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-lg btn-default">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                Footer
-                            </div>
-                            <!-- /.card-footer-->
                         </div>
-                        <!-- /.card -->
                     </div>
-                </div>
+                </form>
             </div>
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
 
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
@@ -907,11 +904,16 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- Select2 -->
+<script src="../../plugins/select2/js/select2.full.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
+<script>
+    $(function () {
+        $('.select2').select2()
+    });
+</script>
 </body>
 </html>

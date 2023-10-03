@@ -3,18 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Fixed Sidebar</title>
+    <title>AdminLTE 3 | FAQ</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
@@ -156,7 +154,7 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar main-sidebar-custom sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="../../index3.html" class="brand-link">
             <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -230,8 +228,8 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Layout Options
@@ -265,9 +263,9 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../layout/fixed-sidebar-custom.html" class="nav-link active">
+                                <a href="../layout/fixed-sidebar-custom.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p class="">Fixed Sidebar<small> + Custom Area</small></p>
+                                    <p>Fixed Sidebar <small>+ Custom Area</small></p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -503,8 +501,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-book"></i>
                             <p>
                                 Pages
@@ -513,61 +511,61 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="../examples/invoice.html" class="nav-link">
+                                <a href="/invoice.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Invoice</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/profile.html" class="nav-link">
+                                <a href="/profile.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Profile</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/e-commerce.html" class="nav-link">
+                                <a href="/e-commerce.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>E-commerce</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/projects.html" class="nav-link">
+                                <a href="/projects.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Projects</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-add.html" class="nav-link">
+                                <a href="/project-add.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Add</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-edit.html" class="nav-link">
+                                <a href="/project-edit.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Edit</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/project-detail.html" class="nav-link">
+                                <a href="/project-detail.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Project Detail</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contacts.html" class="nav-link">
+                                <a href="/contacts.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contacts</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/faq.html" class="nav-link">
+                                <a href="/faq.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>FAQ</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/contact-us.html" class="nav-link">
+                                <a href="/contact-us.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Contact us</p>
                                 </a>
@@ -593,25 +591,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login.html" class="nav-link">
+                                        <a href="/login.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register.html" class="nav-link">
+                                        <a href="/register.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password.html" class="nav-link">
+                                        <a href="/forgot-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v1</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password.html" class="nav-link">
+                                        <a href="/recover-password.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v1</p>
                                         </a>
@@ -628,25 +626,25 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../examples/login-v2.html" class="nav-link">
+                                        <a href="/login-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Login v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/register-v2.html" class="nav-link">
+                                        <a href="/register-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Register v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/forgot-password-v2.html" class="nav-link">
+                                        <a href="/forgot-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Forgot Password v2</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="../examples/recover-password-v2.html" class="nav-link">
+                                        <a href="/recover-password-v2.html" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Recover Password v2</p>
                                         </a>
@@ -654,43 +652,43 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/lockscreen.html" class="nav-link">
+                                <a href="/lockscreen.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Lockscreen</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/legacy-user-menu.html" class="nav-link">
+                                <a href="/legacy-user-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Legacy User Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/language-menu.html" class="nav-link">
+                                <a href="/language-menu.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Language Menu</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/404.html" class="nav-link">
+                                <a href="/404.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 404</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/500.html" class="nav-link">
+                                <a href="/500.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Error 500</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/pace.html" class="nav-link">
+                                <a href="/pace.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Pace</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="../examples/blank.html" class="nav-link">
+                                <a href="/blank.html" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Blank Page</p>
                                 </a>
@@ -828,12 +826,6 @@
             <!-- /.sidebar-menu -->
         </div>
         <!-- /.sidebar -->
-
-        <div class="sidebar-custom">
-            <a href="#" class="btn btn-link"><i class="fas fa-cogs"></i></a>
-            <a href="#" class="btn btn-secondary hide-on-collapse pos-right">Help</a>
-        </div>
-        <!-- /.sidebar-custom -->
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
@@ -843,13 +835,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Fixed Layout</h1>
+                        <h1>FAQ</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Layout</a></li>
-                            <li class="breadcrumb-item active">Fixed Layout</li>
+                            <li class="breadcrumb-item active">FAQ</li>
                         </ol>
                     </div>
                 </div>
@@ -858,35 +849,142 @@
 
         <!-- Main content -->
         <section class="content">
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Default box -->
-                        <div class="card">
+            <div class="row">
+                <div class="col-12" id="accordion">
+                    <div class="card card-primary card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseOne">
                             <div class="card-header">
-                                <h3 class="card-title">Title</h3>
-
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
+                                <h4 class="card-title w-100">
+                                    1. Lorem ipsum dolor sit amet
+                                </h4>
                             </div>
+                        </a>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
                             <div class="card-body">
-                                Start creating your amazing application!
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                             </div>
-                            <!-- /.card-body -->
-                            <div class="card-footer">
-                                Footer
-                            </div>
-                            <!-- /.card-footer-->
                         </div>
-                        <!-- /.card -->
                     </div>
+                    <div class="card card-primary card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseTwo">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    2. Aenean massa
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-primary card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseThree">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    3. Donec quam felis
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-warning card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseFour">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    4. Donec pede justo
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-warning card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseFive">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    5. In enim justo
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseFive" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-warning card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseSix">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    6. Integer tincidunt
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseSix" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-danger card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseSeven">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    7. Aenean leo ligula
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-danger card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseEight">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    8. Aliquam lorem ante
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseEight" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-danger card-outline">
+                        <a class="d-block w-100" data-toggle="collapse" href="#collapseNine">
+                            <div class="card-header">
+                                <h4 class="card-title w-100">
+                                    9.  Quisque rutrum
+                                </h4>
+                            </div>
+                        </a>
+                        <div id="collapseNine" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-3 text-center">
+                    <p class="lead">
+                        <a href="contact-us.html">Contact us</a>,
+                        if you found not the right anwser or you have a other question?<br />
+                    </p>
                 </div>
             </div>
         </section>
@@ -913,8 +1011,6 @@
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="../../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
