@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('login', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table -> string('email')->unique();
-            $table -> string('password');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string("role",50)->nullable()->after("email");
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('login');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn("role");
+        });
     }
 };
