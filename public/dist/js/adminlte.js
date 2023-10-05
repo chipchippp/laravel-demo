@@ -432,17 +432,17 @@
   var CLASS_NAME_CONTROL_SIDEBAR_ANIMATE = 'control-sidebar-animate';
   var CLASS_NAME_CONTROL_SIDEBAR_OPEN$1 = 'control-sidebar-open';
   var CLASS_NAME_CONTROL_SIDEBAR_SLIDE = 'control-sidebar-slide-open';
-  var CLASS_NAME_LAYOUT_FIXED$1 = 'layout-fixed';
-  var CLASS_NAME_NAVBAR_FIXED = 'layout-navbar-fixed';
-  var CLASS_NAME_NAVBAR_SM_FIXED = 'layout-sm-navbar-fixed';
-  var CLASS_NAME_NAVBAR_MD_FIXED = 'layout-md-navbar-fixed';
-  var CLASS_NAME_NAVBAR_LG_FIXED = 'layout-lg-navbar-fixed';
-  var CLASS_NAME_NAVBAR_XL_FIXED = 'layout-xl-navbar-fixed';
-  var CLASS_NAME_FOOTER_FIXED = 'layout-footer-fixed';
-  var CLASS_NAME_FOOTER_SM_FIXED = 'layout-sm-footer-fixed';
-  var CLASS_NAME_FOOTER_MD_FIXED = 'layout-md-footer-fixed';
-  var CLASS_NAME_FOOTER_LG_FIXED = 'layout-lg-footer-fixed';
-  var CLASS_NAME_FOOTER_XL_FIXED = 'layout-xl-footer-fixed';
+  var CLASS_NAME_LAYOUT_FIXED$1 = 'pages-fixed';
+  var CLASS_NAME_NAVBAR_FIXED = 'pages-navbar-fixed';
+  var CLASS_NAME_NAVBAR_SM_FIXED = 'pages-sm-navbar-fixed';
+  var CLASS_NAME_NAVBAR_MD_FIXED = 'pages-md-navbar-fixed';
+  var CLASS_NAME_NAVBAR_LG_FIXED = 'pages-lg-navbar-fixed';
+  var CLASS_NAME_NAVBAR_XL_FIXED = 'pages-xl-navbar-fixed';
+  var CLASS_NAME_FOOTER_FIXED = 'pages-footer-fixed';
+  var CLASS_NAME_FOOTER_SM_FIXED = 'pages-sm-footer-fixed';
+  var CLASS_NAME_FOOTER_MD_FIXED = 'pages-md-footer-fixed';
+  var CLASS_NAME_FOOTER_LG_FIXED = 'pages-lg-footer-fixed';
+  var CLASS_NAME_FOOTER_XL_FIXED = 'pages-xl-footer-fixed';
   var Default$a = {
     controlsidebarSlide: true,
     scrollbarTheme: 'os-theme-light',
@@ -1688,7 +1688,7 @@
    */
 
   var NAME$6 = 'Layout';
-  var DATA_KEY$6 = 'lte.layout';
+  var DATA_KEY$6 = 'lte.pages';
   var JQUERY_NO_CONFLICT$6 = $__default["default"].fn[NAME$6];
   var SELECTOR_HEADER = '.main-header';
   var SELECTOR_MAIN_SIDEBAR = '.main-sidebar';
@@ -1703,7 +1703,7 @@
   var SELECTOR_PRELOADER = '.preloader';
   var CLASS_NAME_SIDEBAR_COLLAPSED$1 = 'sidebar-collapse';
   var CLASS_NAME_SIDEBAR_FOCUSED = 'sidebar-focused';
-  var CLASS_NAME_LAYOUT_FIXED = 'layout-fixed';
+  var CLASS_NAME_LAYOUT_FIXED = 'pages-fixed';
   var CLASS_NAME_CONTROL_SIDEBAR_SLIDE_OPEN = 'control-sidebar-slide-open';
   var CLASS_NAME_CONTROL_SIDEBAR_OPEN = 'control-sidebar-open';
   var CLASS_NAME_IFRAME_MODE = 'iframe-mode';
@@ -1815,7 +1815,7 @@
     _proto._init = function _init() {
       var _this = this;
 
-      // Activate layout height watcher
+      // Activate pages height watcher
       this.fixLayoutHeight();
 
       if (this._config.loginRegisterAutoHeight === true) {

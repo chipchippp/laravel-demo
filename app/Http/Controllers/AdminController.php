@@ -3,20 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        return view('admin.admin');
+        return view('admin.pages.dashboard');
     }
-    public function table_data(){
-        return view('tables.data');
+    public function admin_order(){
+        $orders = Order::orderBy("id","desc")->paginate(20);
+        return view("admin.pages.orders",["orders"=>$orders]);
     }
-    public function table_jsgrid(){
-        return view('tables.jsgrid');
-    }
-    public function table_simple(){
-        return view('tables.simple');
+    public function admin_invoice(){
+        $products = Product::paginate(20);
+        return view('admin.pages.invoice', ["products" => $products]);
     }
 }
