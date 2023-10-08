@@ -91,16 +91,16 @@
                         </div>
                         <div class="header__top__right__auth">
                             @auth()
-                                <a href="#"><i class="fa fa-user"></i>{{auth()->user()->name}}</a>
-                                <form id="form-logout" action="{{route('logout')}}" method="post">
+                                <a href="#"><i class="fa fa-user"></i> {{auth()->user()->name}}</a>
+                                <form id="form-logout" action="{{route("logout")}}" method="post">
                                     @csrf
                                 </form>
-                                <a href="javascript:void(0)" onclick="$('form-logout').submit();"></a>
-                                <i class="fa fa-align-right">Logout</i>
+                                <a href="javascript:void(0);" onclick="$('#form-logout').submit();">
+                                    <i class="fa fa-align-right"></i>Logout</a>
                             @endauth
                             @guest()
-                                <a href="{{route('login')}}"><i class="fa fa-user"></i> Login</a>
-                                <a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a>
+                                <a href="{{route("login")}}"><i class="fa fa-user"></i>Login</a>
+                                <a href="{{route("register")}}"><i class="fa fa-user"></i>Register</a>
                             @endguest
                         </div>
                     </div>

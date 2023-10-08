@@ -14,6 +14,9 @@ use Srmklive\PayPal\Services\PayPal as PayPalClient;
 
 class HomeController extends Controller
 {
+    public function __construct(){
+//        $this->middleware('auth');
+    }
     public function home(){
 //        $products = Product::where("qty",">",30)
 //                        ->where("price",">",500)
@@ -24,10 +27,6 @@ class HomeController extends Controller
         $products = Product::orderBy("created_at","desc")->paginate(12);
         return view("pages.home",compact("products"));
     }
-    public function aboutUs(){
-        return view("pages.aboutUs");
-    }
-
     public function category(Category $category){
         // dựa vào id tìm category
         // nếu ko tồn tại -> 404
@@ -70,7 +69,6 @@ class HomeController extends Controller
         return redirect()->back()->with("success","Đã thêm sản phẩm vào giỏ hàng");
     }
     public function Cart(){
-
         $cart = session()->has("cart")?session("cart"):[];
         $subtotal = 0;
         $can_checkout = true;
@@ -84,11 +82,7 @@ class HomeController extends Controller
         return view("pages.cart",
             compact("cart", "subtotal", "total","can_checkout"));
     }
-//    public function destroy($id){
-//        $product = Product::find($id);
-//        $product -> delete();
-//        return redirect('/shop-cart');
-//    }
+
     public function delete(Product $product)
     {
         $cart = session()->has("cart") ? session("cart") : [];
@@ -161,9 +155,9 @@ class HomeController extends Controller
         }
 
         // clear cart
-//        session()->forget("cart");
+        session()->forget("cart");
         // send email
-//        event(new CreateNewOrder($order));
+        event(new CreateNewOrder($order));
 
         // thanh toan paypal
         if ($request->payment_method == "Paypal"){
@@ -206,7 +200,7 @@ class HomeController extends Controller
                     ->with('error', $response['message'] ?? 'Something went wrong.');
             }
         }
-        return redirect()->to("thank-to/$order->id");
+        return redirect()->to("thankYou/$order->id");
     }
 
     public function thankYou(Order $order){
@@ -216,18 +210,6 @@ class HomeController extends Controller
 //                        "order_products.qty")
 //                        ->get();
         return view("pages.thankYou",compact("order"));
-    }
-    public function admin(){
-        return view('admin.admin');
-    }
-    public function table_data(){
-        return view('tables.data');
-    }
-    public function table_jsgrid(){
-        return view('tables.jsgrid');
-    }
-    public function table_simple(){
-        return view('tables.simple');
     }
 
     public function paypalSuccess(Order $order){
