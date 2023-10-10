@@ -38,9 +38,20 @@ Route::middleware("auth")->group(function (){
 });
 
 
-Route::middleware("auth")->prefix("admin")->group(function (){
-include_once "admin.php";
+Route::middleware(["auth" , "is_admin"])->prefix("admin")->group(function (){
+//include_once "admin.php";
+    Route::get('/dashboard', [\App\Http\Controllers\AdminController::class,"dashboard"]);
+    Route::get('/category', [\App\Http\Controllers\AdminController::class,"admin_category"]);
+    Route::get('/order', [\App\Http\Controllers\AdminController::class,"admin_order"]);
+    Route::get('/invoice', [\App\Http\Controllers\AdminController::class,"admin_invoice"]);
+    Route::get('/product', [\App\Http\Controllers\AdminController::class,"admin_product"]);
+    Route::get('/create', [\App\Http\Controllers\AdminController::class,"product_create"]);
+
+
 });
+
+Route::get('/a', [\App\Http\Controllers\AdminController::class,"check"]);
+
 
 Auth::routes();
 
