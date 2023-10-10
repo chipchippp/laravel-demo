@@ -44,14 +44,16 @@ Route::middleware(["auth" , "is_admin"])->prefix("admin")->group(function (){
     Route::get('/category', [\App\Http\Controllers\AdminController::class,"admin_category"]);
     Route::get('/order', [\App\Http\Controllers\AdminController::class,"admin_order"]);
     Route::get('/invoice', [\App\Http\Controllers\AdminController::class,"admin_invoice"]);
-    Route::get('/product', [\App\Http\Controllers\AdminController::class,"admin_product"]);
-    Route::get('/create', [\App\Http\Controllers\AdminController::class,"product_create"]);
-
-
 });
 
-Route::get('/a', [\App\Http\Controllers\AdminController::class,"check"]);
-
+Route::prefix("product")->group(function (){
+    Route::resource('/product', \App\Http\Controllers\ProductController::class);
+    Route::get('/create', [\App\Http\Controllers\ProductController::class,"product_create"]);
+    Route::post('/create', [\App\Http\Controllers\ProductController::class,"store"]);
+    Route::get('/edit/{product}', [\App\Http\Controllers\ProductController::class,"edit"]);
+    Route::put('/edit/{product}', [\App\Http\Controllers\ProductController::class,"update"]);
+    Route::delete('/delete/{product}', [\App\Http\Controllers\ProductController::class,"delete"]);
+});
 
 Auth::routes();
 
