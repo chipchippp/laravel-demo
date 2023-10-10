@@ -146,7 +146,7 @@
                     <div class="section-title related__product__title">
                         <h2>Related Product</h2>
                     </div>
-                </div>
+                </div>x
             </div>
             <div class="row">
                 @foreach($relateds as $item)
