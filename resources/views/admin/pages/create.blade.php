@@ -63,16 +63,6 @@
                                            type="text"
                                            name="count"
                                            placeholder="Enter food's count">
-                                    <div>
-                                        <label>Choose a categories:</label>
-{{--                                        <select name="category_id">--}}
-{{--                                            @foreach($categories as $category)--}}
-{{--                                                <option value="{{$category->id}}">--}}
-{{--                                                    {{$category->name}}--}}
-{{--                                                </option>--}}
-{{--                                            @endforeach--}}
-{{--                                        </select>--}}
-                                    </div>
 
                                     <button class="btn btn-primary" type="submit">Submit</button>
                                     @if($errors ->any())
