@@ -18,14 +18,14 @@ class OrderFactory extends Factory
     {
         $user_id = $this-> faker->unique();
         return [
-            'grand_total' => 0,
-            'user_id' =>random_int(1, 10),
-            'full_name' =>  $this->faker->name,
-            "tel" => $this->faker->phoneNumber,
-            'address' => $this->faker-> address,
-            "shipping_method" => "Express",
-            "payment_method" => "COD",
-            "status" => random_int(0,3),
+            "grand_total"=>0,
+            "user_id"=>random_int(1,10),
+            "full_name"=> $this->faker->name,
+            "tel"=>$this->faker->phoneNumber,
+            "address"=>$this->faker->address,
+            "shipping_method"=>"Express",
+            "payment_method"=>"COD",
+            "status"=>random_int(0,3)
         ];
     }
 }
