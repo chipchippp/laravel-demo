@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
          ]);
 
         \App\Models\Category::factory(10)->create();
-        \App\Models\Product::factory(1000)->create();
+        \App\Models\Product::factory(300)->create();
         \App\Models\Order::factory(100)->create();
         $orders = Order::all(); //select * from orders
         foreach ($orders as $order){
