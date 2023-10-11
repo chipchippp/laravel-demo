@@ -12,12 +12,14 @@ class ProductController extends Controller
 {
     public function index(){
 //        $products = Product::onlyTrashed()->orderBy("id", "desc") -> paginate(20); // lay san pham da xoa
-        $products = Product::orderBy("id", "desc") -> paginate(20);
-        return view('admin.pages.product', ['products' => $products]);
+        $products = Product::orderBy("id","desc")->paginate(20);
+        return view("admin.pages.product",[
+            "products"=>$products
+        ]);
     }
-    public function product_create(){
+    public function create(Product $product){
         $categories = Category::all();
-        return view('admin.pages.create', ['categories' => $categories]);
+        return view('admin.pages.create', compact('categories', 'product'));
     }
     public function store(Request $request){
         $request->validate([
@@ -45,9 +47,9 @@ class ProductController extends Controller
                 'category_id' => $request->get("category_id"),
                 'description' => $request->get("description"),
             ]);
-             return redirect()->to("/admin/product")->with("success","Successfully");
+             return redirect()->to("/product")->with("success","Successfully");
         } catch (\Exception $e){
-            return redirect('/admin/product')->back()->withErrors($e->getMessage());
+            return redirect('/product')->back()->withErrors($e->getMessage());
         }
     }
 
@@ -74,10 +76,10 @@ class ProductController extends Controller
                     'category_id' => $request->get("category_id"),
                     'description' => $request->get("description"),
                 ]);
-            return redirect()->to("/admin/product")->with("success","Successfully");
+            return redirect()->to("/product")->with("success","Successfully");
 
         }catch (\Exception $e  ){
-            return redirect('/admin/product')->back()->withErrors($e->getMessage());
+            return redirect('/product')->back()->withErrors($e->getMessage());
         }
     }
 
@@ -85,10 +87,10 @@ class ProductController extends Controller
         try {
             $product = Product::find($id);
             $product -> delete();
-            return redirect()->to("/admin/product")->with("success","Successfully");
+            return redirect()->to("/product")->with("success","Successfully");
 
         }catch (\Exception $e  ){
-            return redirect('/admin/product')->back()->withErrors($e->getMessage());
+            return redirect('/product')->back()->withErrors($e->getMessage());
         }
     }
 }

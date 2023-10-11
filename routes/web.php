@@ -47,8 +47,8 @@ Route::middleware(["auth" , "is_admin"])->prefix("admin")->group(function (){
 });
 
 Route::prefix("product")->group(function (){
-    Route::resource('/product', \App\Http\Controllers\ProductController::class);
-    Route::get('/create', [\App\Http\Controllers\ProductController::class,"product_create"]);
+    Route::get('/', [\App\Http\Controllers\ProductController::class, "index"]);
+    Route::get('/create', [\App\Http\Controllers\ProductController::class,"create"]);
     Route::post('/create', [\App\Http\Controllers\ProductController::class,"store"]);
     Route::get('/edit/{product}', [\App\Http\Controllers\ProductController::class,"edit"]);
     Route::put('/edit/{product}', [\App\Http\Controllers\ProductController::class,"update"]);

@@ -24,7 +24,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <a href="/admin/create"
+                        <a href="/product/create"
                            class="btn btn-primary"
                            role="button">
                             Create a new Products
@@ -65,14 +65,14 @@
                                     <td>#{{$loop ->index + 1}}</td>
                                     <td><img width="100" src="{{$product->thumbnail}}" /></td>
                                     <td>{{$product ->name}}</td>
-                                    <td>{{$product ->price}}</td>
+                                    <td>${{$product ->price}}</td>
                                     <td>{{$product ->qty}}</td>
                                     <td>{{$product ->Category->name}}</td>
 {{--                                    <td>{{$products -> created_at}}</td>--}}
 {{--                                    <td>{{$products -> update_at}}</td>--}}
-                                    <td><a href="{{url("/admin/product/edit", ["product"=>$product->id])}}" class="btn btn-warning me-md-2 btn-group">Edit</a></td>
+                                    <td><a href="{{url("/product/edit", ["product"=>$product->id])}}" class="btn btn-warning me-md-2 btn-group">Edit</a></td>
                                     <td>
-                                       <form action="{{url("/admin/product/delete", ["product"=>$product->id])}}" method="post">
+                                       <form action="{{url("/product/delete", ["product"=>$product->id])}}" method="post">
                                            @csrf
                                            @method('delete')
                                            <button onclick="return confirm('chac chan : {{$product->name}}')" type="submit" class="btn btn-danger">Delete</button>

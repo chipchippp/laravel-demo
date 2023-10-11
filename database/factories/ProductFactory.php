@@ -21,7 +21,7 @@ class ProductFactory extends Factory
         return [
             "name"=> $name,
             "slug"=> Str::slug($name),
-            "price"=> random_int(10,500),
+            "price"=> random_int(10,300),
             "thumbnail"=>"/img/product/product-".random_int(1,12).".jpg",
             "description"=>$this->faker->text(300),
             "qty"=>random_int(2,50),
