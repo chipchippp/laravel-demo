@@ -31,7 +31,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{url("admin/product/create")}}" method="post" enctype="multipart/form-data">
+            <form action="{{url("/product/create")}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">

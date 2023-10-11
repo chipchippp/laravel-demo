@@ -191,7 +191,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="{{url("/product/index")}}" class="nav-link">
+                            <a href="{{url("/product/")}}" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>Products</p>
                             </a>

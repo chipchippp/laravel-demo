@@ -1,12 +1,13 @@
 @extends("admin.layouts.admin_app")
 @section("main")
+    <div class="content-wrapper">
     <div class="card card-primary">
         <div class="card-header">
             <h3 class="card-title">Quick Example</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form action="{{url("admin/product/edit",['product'=>$product->id])}}" method="post" enctype="multipart/form-data">
+        <form action="{{url("product/edit",['product'=>$product->id])}}" method="post" enctype="multipart/form-data">
             @csrf
             @method("PUT")
             <div class="card-body">
@@ -67,5 +68,6 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
+    </div>
     </div>
 @endsection
