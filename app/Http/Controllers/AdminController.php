@@ -19,9 +19,8 @@ class AdminController extends Controller
         $orders = Order::orderBy("id","desc")->paginate(20);
         return view("admin.pages.orders",["orders"=>$orders]);
     }
-    public function admin_invoice(){
-        $order = Order::all();
-        $products = Product::paginate(20);
-        return view('admin.pages.invoice', compact("order", "products"));
+    public function invoice(Order $order){
+//        $products = Product::paginate(20);
+        return view('admin.pages.invoice', compact("order"));
     }
 }

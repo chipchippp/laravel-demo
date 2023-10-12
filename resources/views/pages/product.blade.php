@@ -30,6 +30,7 @@
                     <div class="product__details__text">
                         <h3>{{$product->name}}</h3>
                         <h5>Category: {{$product->Category->name}}</h5>
+                        <p>Qty: {{$product->qty}}</p>
                         <p>Đã bán: {{$product->Orders->count()}}</p>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
