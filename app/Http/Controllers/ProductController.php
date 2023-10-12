@@ -10,10 +10,30 @@ use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
-    public function index(){
-        $products = Product::orderBy("id","desc")->paginate(20);
+    public function index(Request $request){
+
+        $search = $request->get("search");
+        $category_id = $request->get("category_id");
+        $price_from = $request->get("price_from");
+        $price_to = $request->get("price_to");
+
+//        if ($request->has("search")){
+//            $products = Product::where("category_id", $category_id)->where("name", 'like', "%$search%")->orderBy("id","desc")->paginate(20);
+//        } elseif (){
+//
+//        }
+//        else{
+//            $products = Product::orderBy("id","desc")->paginate(20);
+//        }
+
+        // scope search
+
+        $products = Product::Search($request)->FilterCategory($request)->orderBy("id","desc")->paginate(20);
+        // Scope search
+        $categories = Category::all();
         return view("admin.pages.product",[
-            "products"=>$products
+            "products"=>$products,
+            'categories'=>$categories
         ]);
     }
 

@@ -20,7 +20,8 @@ class AdminController extends Controller
         return view("admin.pages.orders",["orders"=>$orders]);
     }
     public function admin_invoice(){
+        $order = Order::all();
         $products = Product::paginate(20);
-        return view('admin.pages.invoice', ["products" => $products]);
+        return view('admin.pages.invoice', compact("order", "products"));
     }
 }

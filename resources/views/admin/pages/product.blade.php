@@ -30,8 +30,23 @@
                             Create a new Products
                         </a>
                         <div class="card-tools">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                            <form action="{{url("/product/")}}" method="Get">
+                                <div class="input-group input-group-sm mr-2" style="width: 100px; float:left">
+                                    <input class="form-control" type="number" name="price_from" placeholder="Price from"/>
+                                </div>
+                                <div class="input-group input-group-sm mr-2" style="width: 100px; float:left">
+                                    <input class="form-control" type="number" name="price_to" placeholder="Price to"/>
+                                </div>
+                                <div class="input-group input-group-sm mr-2" style="width: 150px; float:left">
+                                    <select name="category_id" class="form-control">
+                                        <option value="0">Filter by category</option>
+                                        @foreach($categories as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="input-group input-group-sm" style="width: 150px;float:left">
+                                    <input value="{{app("request")->input("search")}}" type="text" name="search" class="form-control float-right" placeholder="Search">
 
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-default">
@@ -39,6 +54,7 @@
                                     </button>
                                 </div>
                             </div>
+                            </form>
                         </div>
                     </div>
 
