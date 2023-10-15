@@ -94,45 +94,88 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tabs-1" role="tabpanel">
                             <div class="product__details__tab__desc">
-                                <h6>Products Infomation</h6>
+                                <h6>Description</h6>
                                 <p>{{$product->description}}</p>
                             </div>
                         </div>
                         <div class="tab-pane" id="tabs-2" role="tabpanel">
                             <div class="product__details__tab__desc">
-                                <h6>Products Infomation</h6>
-                                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                    Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                    Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                    sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                    eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                    sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                    diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                    Proin eget tortor risus.</p>
-                                <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem
-                                    ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet
-                                    elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                                    porta. Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-                                    nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                                <h6>Infomation</h6>
+                                <p>{{$product->description}}</p>
                             </div>
                         </div>
                         <div class="tab-pane" id="tabs-3" role="tabpanel">
                             <div class="product__details__tab__desc">
-                                <h6>Products Infomation</h6>
-                                <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
-                                    Pellentesque in ipsum id orci porta dapibus. Proin eget tortor risus.
-                                    Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam
-                                    sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo
-                                    eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.
-                                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent
-                                    sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac
-                                    diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante
-                                    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                    Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                                    Proin eget tortor risus.</p>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="row total_rate">
+                                            <div class="col-6">
+                                                <div class="box_total">
+                                                    <h5>Overall</h5>
+                                                    <h4>4.0</h4>
+                                                    <h6>(03 Reviews)</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="review_list">
+                                            <div class="review_item">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h4>Blake Ruiz</h4>
+{{--                                                        <i class="fa fa-star"></i>--}}
+                                                    </div>
+                                                </div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                    commodo
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="review_box">
+                                            <h4>Add a Review</h4>
+                                            <hr>
+                                            <form class="row contact_form" action="{{url("/detail/{product:slug}")}}" method="post" id="contactForm" novalidate="novalidate">
+                                                @csrf
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" value="{{old("name")}}" id="name" name="name" placeholder="Your Full name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="email" class="form-control" value="{{old("email")}}" id="email" name="email" placeholder="Email Address">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" value="{{old("tel")}}" id="number" name="number" placeholder="Phone Number" >
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <textarea class="form-control" name="message" id="message" rows="1" placeholder="Review" ></textarea>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="col-md-12 text-right">
+                                                    <hr>
+                                                    {{--                                        rating--}}
+                                                    <div class="rate" data-rate-value= ></div>
+                                                    <form action="" method="POST" class="form-inline" role="form">
+                                                        <div class="form-group row">
+                                                            <input type="hidden" class="form-control" name="rating_start" id="rating_start">
+                                                            <input type="hidden" class="form-control" id="product_id" name="product_id" value="{{$product->id}}">
+                                                        </div>
+                                                    </form>
+                                                    <button type="submit" value="submit" class="site-btn">Submit Now</button>
+
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -140,6 +183,7 @@
             </div>
         </div>
     </div>
+    <hr>
     <section class="related-product">
         <div class="container">
             <div class="row">
@@ -147,7 +191,7 @@
                     <div class="section-title related__product__title">
                         <h2>Related Product</h2>
                     </div>
-                </div>x
+                </div>
             </div>
             <div class="row">
                 @foreach($relateds as $item)
@@ -170,4 +214,54 @@
             </div>
         </div>
     </section>
+
+
+
+@stop()
+@section("before_css")
+    <style>
+        .rate{
+            color: #fbd600;
+            font-size: 30px;
+        }
+        #rating_start, #product_id{
+            height: 40px;
+            width: 60px;
+        }
+        .rate-base-layer
+        {
+            color: #aaa;
+        }
+        .rate-hover-layer
+        {
+            color: orange;
+        }
+
+        .rate-base-layer span, .rate-base-layer span
+        {
+            opacity: 0.5;
+        }
+        hr
+        {
+            border: 1px solid #ccc;
+        }
+    </style>
+@stop()
+@section("before_js")
+    {{--rating--}}
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            var options = {
+                max_value: 5,
+                step_size: 1,
+                initial_value: 3,
+            }
+            $(".rate").rate(options).on("click", function() {
+                var ratingValue = $(this).rate("getValue");  // Get the clicked rating value
+                $("#rating_start").val(ratingValue);  // Update the input value
+            });
+
+        });
+    </script>
 @endsection
