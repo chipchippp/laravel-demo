@@ -43,7 +43,7 @@ Route::middleware(["auth" , "is_admin"])->prefix("admin")->group(function (){
     Route::get('/dashboard', [\App\Http\Controllers\AdminController::class,"dashboard"]);
     Route::get('/category', [\App\Http\Controllers\AdminController::class,"admin_category"]);
     Route::get('/order', [\App\Http\Controllers\AdminController::class,"admin_order"]);
-    Route::get('/invoice', [\App\Http\Controllers\AdminController::class,"invoice"]);
+    Route::get('/invoice/{order}', [\App\Http\Controllers\AdminController::class,"invoice"]);
 });
 
 Route::prefix("product")->group(function (){

@@ -20,6 +20,9 @@
         </section>
 
         <section class="content">
+            @php
+                $order = App\Models\Order::all();
+            @endphp
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">

@@ -36,9 +36,8 @@ class HomeController extends Controller
 //        }
 
 //        $category = Category::findOrFail($id);
-
         $products = Product::where("category_id",$category->id)
-            ->orderBy("created_at","desc")->paginate(12);
+            ->orderBy("created_at","desc")->paginate(10);
         return view("pages.category",compact("products"));
     }
 
