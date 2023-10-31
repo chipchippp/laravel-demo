@@ -162,8 +162,9 @@
                                                 <div class="col-md-12 text-right">
                                                     <hr>
                                                     {{--                                        rating--}}
-                                                    <div class="rate" data-rate-value= ></div>
-                                                    <form action="" method="POST" class="form-inline" role="form">
+
+                                                    <div class="rate"></div>
+                                                    <form action="{{url("/detail")}}" method="POST" class="form-inline" id="formRating">
                                                         <div class="form-group row">
                                                             <input type="hidden" class="form-control" name="rating_start" id="rating_start">
                                                             <input type="hidden" class="form-control" id="product_id" name="product_id" value="{{$product->id}}">
@@ -214,8 +215,6 @@
             </div>
         </div>
     </section>
-
-
 
 @stop()
 @section("before_css")

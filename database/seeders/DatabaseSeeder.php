@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
              'password' => bcrypt("12345678"),
              "role" => "ADMIN"
          ]);
+//        \App\Models\Reviews::factory(10)->create();
 
         \App\Models\Category::factory(10)->create();
         \App\Models\Product::factory(300)->create();
